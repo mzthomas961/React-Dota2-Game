@@ -1,7 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import {useState, useEffect} from 'react';
 
 function App() {
+  const [heroes, setHeroes] = useState([])
+console.log(heroes)
+
+useEffect(() => fetch("https://api.opendota.com/api/heroStats").then(r => r.json()).then(data => setHeroes(data)))
+
   return (
     <div className="App">
       <header className="App-header">

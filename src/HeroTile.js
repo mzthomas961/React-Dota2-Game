@@ -1,9 +1,11 @@
 import React from "react";
 
-function HeroTile({image}){
+function HeroTile({image, name,icon}){
+    console.log(image)
     return (
         <div>
-            {image}
+            <img src = {icon}/>
+            <h1>{name}</h1>
         </div>
     )
 

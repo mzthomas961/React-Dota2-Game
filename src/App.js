@@ -1,29 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 import {useState, useEffect} from 'react';
+import HeroesDisplay from './HeroesDisplay';
 
 function App() {
   const [heroes, setHeroes] = useState([])
 console.log(heroes)
-
+ //setting all heroes into an array
 useEffect(() => fetch("https://api.opendota.com/api/heroStats").then(r => r.json()).then(data => setHeroes(data)))
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HeroesDisplay/>
     </div>
   );
 }

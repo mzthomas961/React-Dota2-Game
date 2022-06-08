@@ -1,8 +1,17 @@
 import React from "react";
+import HeroTile from "./HeroTile";
 
-function HeroesDisplay(){
+
+function HeroesDisplay(heroes){
+    const heroObjects = heroes.map((hero) =>{
+        return(
+            <HeroTile 
+           image = {hero.img}
+           />    
+        )
+    })
     return(
-        <div></div>
+        <div>{heroObjects}</div>
     )
 }
 export default  HeroesDisplay

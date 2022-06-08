@@ -4,14 +4,21 @@ import {useState, useEffect} from 'react';
 import HeroesDisplay from './HeroesDisplay';
 
 function App() {
-  const [heroes, setHeroes] = useState([])
-console.log(heroes)
  //setting all heroes into an array
-useEffect(() => fetch("https://api.opendota.com/api/heroStats").then(r => r.json()).then(data => setHeroes(data)))
+ const [heroes, setHeroes] = useState([])
+useEffect(() => {
+  fetch("https://api.opendota.com/api/heroStats").then(r => r.json()).then(data => setHeroes(data))
+}
+)
+
+console.log(heroes)
+
+
+
 
   return (
     <div className="App">
-      <HeroesDisplay/>
+      <HeroesDisplay heroes = {heroes}/>
     </div>
   );
 }

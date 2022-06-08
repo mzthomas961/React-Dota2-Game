@@ -1,8 +1,10 @@
 import React from "react";
 
-function HeroTile(){
+function HeroTile({image}){
     return (
-        <div></div>
+        <div>
+            {image}
+        </div>
     )
 
 }

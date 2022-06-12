@@ -8,6 +8,7 @@ function HeroesDisplay({heroes}){
         return(
             <HeroTile 
            image = {hero.url_large_portrait}
+           name = {hero.localized_name}
            />    
         )
     })

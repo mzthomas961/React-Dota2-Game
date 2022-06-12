@@ -4,7 +4,7 @@ function HeroTile({image, name,icon}){
     console.log(image)
     return (
         <div>
-            <img src = {icon}/>
+            <img src = {image}/>
             <h1>{name}</h1>
         </div>
     )

@@ -7,9 +7,7 @@ function HeroesDisplay({heroes}){
     const heroObjects = heroes.map((hero) =>{
         return(
             <HeroTile 
-           image = {hero.img}
-           name = {hero.name}
-            icon = {hero.icon}
+           image = {hero.url_large_portrait}
            />    
         )
     })

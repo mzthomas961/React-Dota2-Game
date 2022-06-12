@@ -2,16 +2,11 @@ import logo from './logo.svg';
 import './App.css';
 import {useState, useEffect} from 'react';
 import HeroesDisplay from './HeroesDisplay';
+import data from "./heroes.json"
+
 
 function App() {
- //setting all heroes into an array
- const [heroes, setHeroes] = useState([])
-useEffect(() => {
-  fetch("https://api.opendota.com/api/heroStats")
-  .then(r => r.json())
-  .then(data => setHeroes(data))
-},[]
-)
+const heroes = data.heroes
 
 console.log(heroes)
 
